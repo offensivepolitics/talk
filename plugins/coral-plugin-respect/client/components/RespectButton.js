@@ -34,6 +34,10 @@ class RespectButton extends Component {
       postRespect({
         item_id: comment.id,
         item_type: 'COMMENTS'
+      }).then((res) => {
+        console.log("success", res);
+      }).catch((err) => {
+        console.error(err);
       });
     }
   }
